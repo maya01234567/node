@@ -1,0 +1,545 @@
+[
+    {
+        "id": "e58c7c40d0bd795c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b4168bf8bb9ba9a9",
+        "type": "mqtt-broker",
+        "name": "LOCAL",
+        "broker": "industrial.api.ubidots.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "bdad7f957dd056ce",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c1e685a402bcad25",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b8b9062ef3b32f4e",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "bdad7f957dd056ce",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "22cf9ae31d9d7806",
+        "type": "remote-config",
+        "name": "Node-RED UI2",
+        "host": "localhost",
+        "protocol": "https",
+        "port": "1880",
+        "baseurl": "/ui",
+        "instancehash": "y2h1b1ssfhnqguer0lw6l9d4h0f2s2djbodcbtj355x4hnyu610blrtpdbcff4zo",
+        "server": "nodered04.remote-red.com",
+        "region": "de"
+    },
+    {
+        "id": "39cdda05222c99b8",
+        "type": "mqtt in",
+        "z": "e58c7c40d0bd795c",
+        "name": "LOCAL",
+        "topic": "/v1.6/devices/demo2",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b4168bf8bb9ba9a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [
+                "c16e91c745a69652"
+            ]
+        ]
+    },
+    {
+        "id": "c16e91c745a69652",
+        "type": "debug",
+        "z": "e58c7c40d0bd795c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 430,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "9ed083a09da93250",
+        "type": "mqtt in",
+        "z": "e58c7c40d0bd795c",
+        "name": "temperature1",
+        "topic": "/v1.6/devices/demo2/temperature1/lv",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b4168bf8bb9ba9a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 320,
+        "wires": [
+            [
+                "ba9b3526a936692e",
+                "f5c0e53a3c6cc3e9"
+            ]
+        ]
+    },
+    {
+        "id": "ba9b3526a936692e",
+        "type": "ui_gauge",
+        "z": "e58c7c40d0bd795c",
+        "name": "",
+        "group": "b8b9062ef3b32f4e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "temperature1",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4a19491a66b2c2f4",
+        "type": "remote-access",
+        "z": "e58c7c40d0bd795c",
+        "confignode": "22cf9ae31d9d7806",
+        "name": "home",
+        "verbose": true,
+        "x": 790,
+        "y": 180,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fcec67a350d7a31b",
+        "type": "mqtt in",
+        "z": "e58c7c40d0bd795c",
+        "name": "temperature",
+        "topic": "/v1.6/devices/demo2/temperature/lv",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b4168bf8bb9ba9a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "854af5c52571915f"
+            ]
+        ]
+    },
+    {
+        "id": "854af5c52571915f",
+        "type": "ui_gauge",
+        "z": "e58c7c40d0bd795c",
+        "name": "",
+        "group": "b8b9062ef3b32f4e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "temperature",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "12319982ec9738b5",
+        "type": "mqtt in",
+        "z": "e58c7c40d0bd795c",
+        "name": "humidity",
+        "topic": "/v1.6/devices/demo2/humidity/lv",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b4168bf8bb9ba9a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 440,
+        "wires": [
+            [
+                "03ce710b49e5d66a"
+            ]
+        ]
+    },
+    {
+        "id": "03ce710b49e5d66a",
+        "type": "ui_gauge",
+        "z": "e58c7c40d0bd795c",
+        "name": "",
+        "group": "b8b9062ef3b32f4e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "humidity",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 520,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "062b89a1e84bc484",
+        "type": "mqtt in",
+        "z": "e58c7c40d0bd795c",
+        "name": "humidity1",
+        "topic": "/v1.6/devices/demo2/humidity1/lv",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b4168bf8bb9ba9a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 500,
+        "wires": [
+            [
+                "f1acd817639c1eee",
+                "f5c0e53a3c6cc3e9"
+            ]
+        ]
+    },
+    {
+        "id": "f1acd817639c1eee",
+        "type": "ui_gauge",
+        "z": "e58c7c40d0bd795c",
+        "name": "",
+        "group": "b8b9062ef3b32f4e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "humidity1",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#f90606"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 520,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "41ed1e2073a7879b",
+        "type": "ui_switch",
+        "z": "e58c7c40d0bd795c",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "b8b9062ef3b32f4e",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "/v1.6/devices/demo2/led",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 260,
+        "wires": [
+            [
+                "97ed70b6e5eea876"
+            ]
+        ]
+    },
+    {
+        "id": "97ed70b6e5eea876",
+        "type": "mqtt out",
+        "z": "e58c7c40d0bd795c",
+        "name": "led",
+        "topic": "/v1.6/devices/demo2/led",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b4168bf8bb9ba9a9",
+        "x": 450,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "caee02188b3a257d",
+        "type": "ui_colour_picker",
+        "z": "e58c7c40d0bd795c",
+        "name": "",
+        "label": "",
+        "group": "b8b9062ef3b32f4e",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 210,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5c0e53a3c6cc3e9",
+        "type": "ui_chart",
+        "z": "e58c7c40d0bd795c",
+        "name": "",
+        "group": "b8b9062ef3b32f4e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0.00000",
+        "ymax": "100.00000",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#00060a",
+            "#aec7e8",
+            "#ff7700",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 390,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    }
+]
